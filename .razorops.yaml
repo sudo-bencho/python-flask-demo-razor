@@ -8,6 +8,7 @@ tasks:
     - commands: 
       - uptime
       - free -m
+      - id -u
       - export PATH="$(python3 -m site --user-base)/bin:$PATH"
       - python3 -m pip install pip-audit
       - pip-audit -r requirements.txt --aliases --desc -f json | python3 -m json.tool
